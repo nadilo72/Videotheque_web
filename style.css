@@ -1,26 +1,31 @@
-.contener{
+body{
+	background-color: #91CCE8
+}
+
+/* CSS du header */
+.header{
 	width: 90%;
-	height: 100px;
+	height: 80px;
+	border: 1px solid #F7F7F7;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .search{
 	width: 33%;
-	height: 100px;
+	height: 80px;
 	float: left;
 }
 .recherche{
-	float: left;
 	width:245px;
 	box-shadow: 0 0 5px 1px #999;
 	-moz-box-shadow: 0 0 5px 1px #999;
 	-webkit-box-shadow: 0 0 5px 1px #999;
-	border:0px solid #f7f7f7;
+	border:0px solid #F7F7F7;
 	-webkit-border-radius:20px;
 	-moz-border-radius:20px;
 	border-radius:20px;
-	margin:auto 0;
+	margin-top: 20px;
+	margin-left: 5px;
 	padding:5px;
 	background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
 	background-image: -webkit-gradient(linear,center top,center bottom,from(#ffffff),to(#dddddd));
@@ -31,7 +36,7 @@
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	border-radius:15px;
-	border:1px solid #ccc;
+	border:1px solid #C0C0C0;
 	height:27px;
 	font-weight:bold;
 	padding-left:10px;
@@ -39,13 +44,13 @@
 }
 .recherche button{
 	cursor:pointer;
-	border:0px solid #f7f7f7;
+	border:0px solid #F7F7F7;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	border-radius:15px;
 	width:30px;
 	height:30px;
-	color:#fff;
+	color:#F0F0F0;
 	background:#111;
 	background-image:-moz-linear-gradient(top, #444444, #222222);
 	background-image: -webkit-gradient(linear,center top,center bottom,from(#444444),to(#222222));
@@ -56,20 +61,55 @@
 	-moz-transform: scale(1.1,1.1);
 	-o-transform: scale(1.1,1.1);
 }
-
 .logo{
 	width: 33%;
-	height: 100px;
+	height: 80px;
 	float: left;
 }
 .logo h1{
 	text-align: center;
 	color: #00606C;
-	font-size: 36px;
+	font-size: 50px;
+	margin-top: 11px;
+}
+.member{
+	width:25%;
+	height: 80px;
+	float: right;
+}
+.member_pic{
+	float: left;
+	height: 70px;
+	width: 70px;
+	margin-top: 4px;
+	margin-right: 5px;
+	border: 1px solid #F7F7F7;
+}
+.member_name{
+	color: #00606C;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	font-size: 20px;
+}
+.member_link{
+	color: #00606C;
+	font-size: 12px;
+}
+.pannier_pic{
+	
+}
+.pannier_nb_item{
+	color: #00606C;
+}
+.pannier_montant{
+	color: #00606C;
 }
 
-.member{
-	width:33%;
-	height: 100px;
-	float: left;
+/* CSS de la main page */
+.contener{
+	width: 90%;
+	height: auto;
+	border: 1px solid #F7F7F7;
+	margin-left: auto;
+	margin-right: auto;
 }
