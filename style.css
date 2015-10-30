@@ -138,16 +138,58 @@ body{
 }
 
 .left_col{
+	overflow: auto;
 	height: 500px;
 	border: 1px solid #F7F7F7;
 }
 
 .center_col{
+	overflow: auto;
 	height: 500px;
 	border: 1px solid #F7F7F7;
 }
 
 .right_col{
+	overflow: auto;
 	height: 500px;
 	border: 1px solid #F7F7F7;
+}
+
+.obj_left{
+	float:left;
+	height: 120px;
+	width: 50%;
+}
+
+.obj_left a img{
+	margin-left:auto;
+	margin-right:auto;
+	height:120px;
+	width:auto;
+	border:none;
+}
+
+.obj_left a span{
+	color: black;
+	font-style: normal;
+	position:absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+	background-color: #F7F7F7;
+	border-radius: 3px;
+	-webkit-transform: scale(0) rotate(-10deg);
+	transform: scale(0) rotate(-10deg);
+	-webkit-transition: all .25s;
+	transition: all .25s;
+}
+
+.obj_left a:hover span{
+	transform:scale(1) rotate(0);
+	-webkit-transform:scale(1) rotate(0);
+}
+
+.obj_right{
+	float:right;
+	height:120px;
+	width:50%;
 }
