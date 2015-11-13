@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-	<title>Header</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
 	<div class="header">
 		<div class="search">
 			<form class="recherche">
@@ -25,5 +17,3 @@
 			<div class="pannier_montant"></div>-->
 		</div>
 	</div>
-</body>
-</html>

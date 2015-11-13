@@ -1,3 +1,4 @@
+/* CSS Commun */
 body{
 	background-color: #91CCE8
 }
@@ -173,7 +174,7 @@ body{
 	color: black;
 	font-style: normal;
 	position:absolute;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-left: 5px;
 	background-color: #F7F7F7;
 	border-radius: 3px;
@@ -193,3 +194,33 @@ body{
 	height:120px;
 	width:50%;
 }
+
+.obj_right a img{
+	margin-left:auto;
+	margin-right:auto;
+	height:120px;
+	width:auto;
+	border:none;
+}
+
+.obj_right a span{
+	color: black;
+	font-style: normal;
+	position:absolute;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #F7F7F7;
+	border-radius: 3px;
+	-webkit-transform: scale(0) rotate(-10deg);
+	transform: scale(0) rotate(-10deg);
+	-webkit-transition: all .25s;
+	transition: all .25s;
+}
+
+.obj_right a:hover span{
+	transform:scale(1) rotate(0);
+	-webkit-transform:scale(1) rotate(0);
+}
+
+/* CSS de la page fiche */
+
