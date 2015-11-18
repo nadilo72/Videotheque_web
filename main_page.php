@@ -4,7 +4,7 @@
 <head>
 	<title>Main Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 </head>
 <body>
 	<?php
@@ -22,19 +22,54 @@
 				<td>
 					<div class="left_col">
 						<?php
-						/*
-						foreach($array as $id)
-						{
-							echo '<div class="obj_left">';
-								echo '<a href="fiche.php'.$id.'">';
-									echo '<img src="'.$img.'" alt="'.$alt.'">';
-									echo '<span>'.$name.'<br><br>Année : '.$year.'<br>Editeur : '.$Editeur.'<br>Developpeur : '.$Developpeur.'<br>Genre : '.$genre.'</span>';
-								echo '</a>';
-							echo '</div>';
-						}
-						*/
+							$jeux = 'FC_grp3_Jeux';
+							$link = mysql_connect('test', 'info201a_user', 'com72');
+							$retour = mysql_select_db('info201a',$link);
+		
+							if ($retour)
+							{
+								$requete="SELECT * FROM ".$jeux." ;";
+								$result = mysql_query($requete,$link);
+				
+								if($result)
+								{
+									mysql_set_charset('utf8', $link);
+									
+									$tmp =0;
+									while($data = mysql_fetch_array($result, MYSQL_ASSOC ))
+									{
+										if($tmp%2==0)
+										{
+											echo '<div class="obj_left">';
+											echo '<a href="fiche.php?ID='.$data['ID'].'">';
+											echo '<img src="IMG/GAME/'.$data["IMG"].'" alt= "Jaquette du jeux '.$data["Title"].'">';
+											echo '<span>'.$data["Title"].'<br><br>Année : '.$data["Annee"].'<br>Editeur : '.$data["Editeur"].'<br>Developpeur : '.$data["Developeur"].'<br>Genre : '.$data["Genre1"].'/'.$data["Genre2"].'</span>';
+											echo '</a>';
+											echo '</div>';
+										}
+										else 
+										{
+											echo '<div class="obj_right">';
+											echo '<a href="fiche.php?ID='.$data['ID'].'">';
+											echo '<img src="IMG/GAME/'.$data["IMG"].'" alt= "Jaquette du jeux '.$data["Title"].'">';
+											echo '<span>'.$data["Title"].'<br><br>Année : '.$data["Annee"].'<br>Editeur : '.$data["Editeur"].'<br>Developpeur : '.$data["Developeur"].'<br>Genre : '.$data["Genre1"].'/'.$data["Genre2"].'</span>';
+											echo '</a>';
+											echo '</div>';
+										}
+										$tmp++;
+									}
+								}
+								else 
+								{
+									echo "Erreur <br> <a href='./authentification.html'>Retour</a>";
+								}
+							}
+							else 
+							{
+								echo "Connexion impossible";		
+							}
 						?>
-						<div class="obj_left">
+						<!--<div class="obj_left">
 							<a href="fiche.php">
 								<img src="images/games/portables/pokemon_bleu.png" alt="Jaquette du jeu ">
 								<span>Pokémon Version Bleu<br><br>Année : 1996<br>Editeur : Nintendo<br>Developpeur : Game Freak<br>Genre : RPG/Aventure</span>
@@ -44,7 +79,7 @@
 							<a href="fiche.php">
 								<img src="images/games/portables/pokemon_rouge.png" alt="Jaquette du jeu ">
 								<span>Pokémon Version Rouge<br><br>Année : 1996<br>Editeur : Nintendo<br>Developpeur : Game Freak<br>Genre : RPG/Aventure</span>
-							</a>
+							</a>-->
 						</div>
 					</div>
 				</td>
