@@ -1,6 +1,6 @@
 	<div class="header">
 		<div class="search">
-			<form class="recherche">
+			<form method="GET" action="search.php" class="recherche">
 					<input type="text" name="keyword" value="Recherche"/>
 					<button>ok</button>
 			</form>

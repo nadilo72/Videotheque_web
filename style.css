@@ -224,3 +224,17 @@ body{
 
 /* CSS de la page fiche */
 
+.game_core{
+		width: 90%;
+		margin-top: 2%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.game_info {	float:right;	width:65%;	min-height:380px;	height:80%;	
+	border:solid 1px #F7F7F7;	color:#00606C;	font-family:Apple_kid, Comic sans ms;}.div_img {	float:left;	width:30%;	height:380px;	border:solid 1px #F7F7F7;}.div_img img{	height: 100%;
+	max-width: 100% !important; 
+	max-height: 100%;
+		display:block;	margin-left: auto;
+	margin-right: auto;
+}.Description {	margin-top: 5%;	margin-left: 2%;	margin-right: 12%;}
