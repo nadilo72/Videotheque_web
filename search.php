@@ -16,14 +16,16 @@
 			mysql_set_charset('utf8', $link);
 			if($retour)
 			{
-				$requete = "SELECT * FROM ".$jeux." WHERE Title IS LIKE (".$search."%);";
+				$requete = "SELECT * FROM ".$jeux." WHERE Title LIKE '%".$search."%';";
 				$result = mysql_query($requete,$link);
 				if($result)
 				{
 					while($data=mysql_fetch_array($result, MYSQL_ASSOC))
 					{
-						echo "<div class= 'result'> <img alt = 'Jaquette du jeux ".$data["Title"]."' src = 'IMG/GAME/".$data["IMG"]."'/>";
+						echo "<a href='fiche.php?ID=".$data["ID"]."'><div class='result'>";
+						echo "<div class= 'img_result'> <img alt = 'Jaquette du jeux ".$data["Title"]."' src = 'IMG/GAME/".$data["IMG"]."'/></div>";
 						echo "<div class='data_result'>Nom : ".$data["Title"]."</div>";
+						echo "</div></a>";
 					}				
 				}
 				else 
@@ -33,7 +35,7 @@
 			}
 			else
 			{
-				echo "Erreur de connexion Ã  la BDD";
+				echo "Erreur de connexion ˆ la BDD";
 			}
 		?>	
 	</div>
